@@ -1,0 +1,45 @@
+8. *Which flight was tracked the longest?
+Find earliest and latest times for each plane on a specific day. Then compute duration between them, take max.
+
+db.planes.aggregate([
+{
+    $match:
+    {
+        date:20130914
+    }
+}, 
+{
+    $group:
+    {
+        _id:"$flight_id",
+        maxTime:
+        {
+            $max:"$time"
+        }, 
+        minTime:
+        {
+            $min:"$time"
+        }
+    }
+},
+{
+    $project:
+    {
+        _id:0,
+        flight_id: "$_id",
+        tracked_time:
+        {
+            $subtract:["$maxTime", "$minTime"]
+        }
+    }
+},
+{
+    $sort:
+    {
+        "tracked_time": -1
+    }
+},
+{
+    $limit: 1
+}
+])

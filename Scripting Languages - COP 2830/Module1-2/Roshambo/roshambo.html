@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>
+            --------------------------------------------------------</br>
+            _.-*'*-.__.-*'*-._ Roshambo _.-*'*-.__.-*'*-._</br>
+            --------------------------------------------------------</br>
+        </h1>
+        <form action="/cgi-bin/Roshambo-CGI.py" method="POST">
+            <div class="form-group">
+                <header><h2>Hand #1</h2></header>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="firstHand" type="radio" value="1" id="1radioRock"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Rock</span>
+                </label>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="firstHand" type="radio" value="2" id="2radioPaper"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Paper</span>
+                </label>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="firstHand" type="radio" value="3" id="3radioScissors"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Scissors</span>
+                </label>
+            </div>
+            <div class="form-group">
+                <header><h2>Hand #2</h2></header>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="secondHand" type="radio" value="1" id="4radioRock"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Rock</span>
+                </label>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="secondHand" type="radio" value="2" id="5radioPaper"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Paper</span>
+                </label>
+                <label class="custom-control custom-radio">
+                    <input class="custom-control-input" name="secondHand" type="radio" value="3" id="6radioScissors"/>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Scissors</span>
+                </label>
+            </div>
+            <input type="submit" value="Play!"/>
+        </form>
+    </body>
+</html>
+
